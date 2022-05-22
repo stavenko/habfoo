@@ -1,0 +1,23 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/search-item-result.yaml
+title: SearchItemResult
+type: object
+required: 
+  - items
+properties: 
+  nextMarker: 
+    type: number
+    format: int64
+  items: 
+    type: array
+    items: 
+      $ref: ./food-item-link.yaml
+example:
+  items:
+  - id: AAFFB0f
+    title: Chicken egg
+    type: fundamental
+  - id: AAB0f
+    title: Chocolate egg
+    type: branded
+    brand: Kinder surprize

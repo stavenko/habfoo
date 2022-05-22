@@ -1,0 +1,85 @@
+openapi: 3.0.0
+servers:
+  - description: food
+    url: /
+info:
+  description: This is API for simple and expressive food server
+  title: HabFoo
+  version: 1.0.0
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+paths:
+
+  /add-meal:
+    post:
+      description: Add meal into our day activity
+      operationId: addMeal
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: ./types/add-meal-request.yaml
+      responses:
+        200: 
+          description: Meal successfully added for user
+
+
+  /get-food-item:
+    get:
+      description: Returns food item data
+      operationId: getFoodItem
+      parameters:
+        - name: itemId
+          in: query
+          required: true
+          schema: 
+            type: string
+
+      responses:
+        200:
+          description: Food with item-id exists and returned
+          content:
+            application/json:
+              schema: 
+                $ref: ./types/food-item-inner.yaml
+            application/yaml:
+              schema:
+                $ref: ./types/food-item-inner.yaml
+  /create-food-item:
+    post:
+      description: Create new food item
+      operationId: createFoodItem
+      requestBody: 
+        required: true
+        content: 
+          application/json:
+            schema: 
+              $ref: ./types/food-item-inner.yaml
+      responses:
+        200:
+          description: Food item created with new Id
+          content: 
+            application/json:
+              schema: 
+                $ref: ./types/create-food-item-result.yaml
+        422:
+          description: Food item invalid and cannot be saved
+
+  /search-food-item:
+    get:
+      description: Search food items by several params
+      operationId: searchFoodItem
+      parameters: 
+        - name: searchInput
+          in: query
+          schema: 
+            $ref: ./types/search-input.yaml
+      responses:
+        200:
+          description: Found 0 or more food items - return
+          content: 
+            application/json:
+              schema: 
+                $ref: ./types/search-item-result.yaml

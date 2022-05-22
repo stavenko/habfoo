@@ -1,0 +1,21 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/nutrient.yaml
+title: Nutrient
+type: object
+description: Food item basic data. Name, nutrients and other staff
+required: 
+  - percentage
+  - kind
+properties:
+  percentage:
+    type: number
+  kind: 
+    type: string
+    enum: 
+      - Energy
+      - Protein
+      - Carbohydrates
+      - Fat
+      - Calcium
+      - Omega-3
+      - Fiber

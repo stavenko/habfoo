@@ -1,0 +1,18 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/fundamental-food-item.yaml
+title: FundamentalFoodItem
+type: object
+description: Some fundamental food, that doesn't depends on producer or brand.
+required: 
+  - title 
+  - nutrients
+properties:
+  title: 
+    type: string
+  description: 
+    type: string
+  nutrients:
+    type: array
+    items: 
+      $ref: ./nutrient.yaml
+

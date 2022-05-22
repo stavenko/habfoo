@@ -1,0 +1,13 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/food-item.yaml
+title: FoodItemInner
+type: object
+description: Food item basic data. Name, nutrients and other staff
+properties: 
+  fundamental:
+    $ref: fundamental-food-item.yaml
+  composite: 
+    $ref: composite-food-item.yaml 
+  branded: 
+    $ref: branded-food-item.yaml 
+

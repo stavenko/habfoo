@@ -1,0 +1,24 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/branded-food-item.yaml
+title: BrandedFoodItem
+type: object
+description: Some food, which you can buy in the grocery, or in the restaurant.
+required:
+  - title
+  - brand
+  - barcode
+  - nutrients
+properties:
+  title: 
+    type: string
+  brand:
+    type: string
+  barcode:
+    type: number
+  description: 
+    type: string
+  nutrients:
+    type: array
+    items: 
+      $ref: ./nutrient.yaml
+

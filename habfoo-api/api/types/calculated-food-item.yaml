@@ -1,0 +1,13 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/calculated-food-item.yaml
+title: CalculatedFoodItem
+type: object
+description: Food item with some amount. Part of composite food item
+required:
+  - amount
+  - foodItem
+properties: 
+  amount: 
+    type: number 
+  foodItem: 
+    $ref: ./food-item-link.yaml

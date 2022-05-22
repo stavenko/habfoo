@@ -1,0 +1,17 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/composite-food-item.yaml
+title: CompositeFoodItem
+type: object
+description: Composite recipe, including most fundamental food and some other recipes
+required: 
+  - title 
+  - composition
+properties:
+  title: 
+    type: string
+  description: 
+    type: string
+  composition:
+    type: array
+    items: 
+      $ref: ./calculated-food-item.yaml

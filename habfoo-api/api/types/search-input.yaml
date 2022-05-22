@@ -1,0 +1,16 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/search-input.yaml
+title: SearchInput
+type: object
+properties: 
+  title:
+    type: string
+  barcode: 
+    type: number
+    format: int64
+  nextMarker:
+    type: number
+    format: int64
+example:
+  title: "Egg"
+

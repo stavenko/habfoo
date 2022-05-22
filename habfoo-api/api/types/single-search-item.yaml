@@ -1,0 +1,16 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/food-item-link.yaml
+title: SingleSearchItem
+type: object
+properties:
+  title:
+    type: string
+  type: 
+    type: string
+    enum: 
+      - value: branded
+      - value: fundamental
+      - value: composite
+  id:
+    type: string
+
