@@ -1,0 +1,7 @@
+
+[workspace]
+
+members = [
+  "habfoo-server-mongo",
+  "habfoo-api-generated"
+]
