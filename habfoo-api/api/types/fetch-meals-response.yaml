@@ -1,0 +1,13 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/fetch-meals-response.yaml
+title: FetchMealsResponse
+type: object
+description: List of meals from startTime to endTime
+properties:
+  items: 
+    type: array
+    items:
+      $ref: ./meal.yaml
+
+  
+

@@ -1,0 +1,11 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/get-all-nutrients-response.yaml
+title: GetAllNutrientsResponse
+type: object
+description: List of serialized nutrients
+properties:
+  nutrients:
+    type: array
+    items:
+      $ref: ./nutrient.yaml
+

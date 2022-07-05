@@ -1,0 +1,11 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/meal.yaml
+title: Meal
+type: object
+description: List of meals from startTime to endTime
+allOf: 
+  - $ref: ./add-meal-request.yaml
+properties:
+  id:
+    type: string
+

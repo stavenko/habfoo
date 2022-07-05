@@ -1,0 +1,11 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/add-meal-response.yaml
+title: AddMealResponse
+type: object
+description: Created meal id
+properties:
+  createdMealId:
+    type: number
+    format: int64
+
+

@@ -1,5 +1,5 @@
 openapi: 3.0.0
-servers:
+;servers:
   - description: food
     url: /
 info:
@@ -24,7 +24,44 @@ paths:
       responses:
         200: 
           description: Meal successfully added for user
+          content:
+            application/json:
+              schema:
+                $ref: ./types/add-meal-response.yaml
+  /fetch-meals:
+    get:
+      description: Get meals from one date-time to another
+      operationId: fetchMeals
+      parameters: 
+        - name: fetchMealsQuery
+          in: query
+          schema: 
+            $ref: ./types/fetch-meals-request.yaml
+      responses:
+        200: 
+          description: Meals fetched and provided
+          content:
+            application/json:
+              schema:
+                $ref: ./types/fetch-meals-response.yaml
 
+  /remove-meal/{mealId}:
+    delete:
+      description: Delete meal from user timeline
+      operationId: removeMeal
+      parameters:
+        - name: mealId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200: 
+          description: Meal successfully deleted
+          content:
+            application/json:
+              schema:
+                $ref: ./types/delete-meal-response.yaml
 
   /get-food-item:
     get:
@@ -36,7 +73,6 @@ paths:
           required: true
           schema: 
             type: string
-
       responses:
         200:
           description: Food with item-id exists and returned
@@ -55,6 +91,9 @@ paths:
         required: true
         content: 
           application/json:
+            schema: 
+              $ref: ./types/food-item-inner.yaml
+          application/yaml:
             schema: 
               $ref: ./types/food-item-inner.yaml
       responses:

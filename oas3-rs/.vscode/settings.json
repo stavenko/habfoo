@@ -1,0 +1,24 @@
+{
+    "cSpell.words": [
+        "Deque",
+        "INTS",
+        "NUMS",
+        "SPDX",
+        "STRS",
+        "Semver",
+        "btreemap",
+        "deserializable",
+        "dotenv",
+        "maplit",
+        "noncomposite",
+        "openapi",
+        "petstore",
+        "prettytable",
+        "println",
+        "reqwest",
+        "rustfmt",
+        "valtree",
+        "valtrees"
+    ],
+    "rust-analyzer.diagnostics.disabled": ["unresolved-import"]
+}

@@ -1,0 +1,12 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/fetch-meals-request.yaml
+title: FetchMealsRequest
+type: object
+description: Get all meals, from startTime to endTime
+properties:
+  endTime: 
+    type: string
+    format: date-time
+  startTime: 
+    type: string
+    format: date-time

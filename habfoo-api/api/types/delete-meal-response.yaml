@@ -1,0 +1,9 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/delete-meal-response.yaml
+title: DeleteMealResponse
+type: object
+description: Deleted meal with id
+allOf: 
+  - $ref: ./meal.yaml
+
+

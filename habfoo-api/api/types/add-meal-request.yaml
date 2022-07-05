@@ -1,0 +1,27 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: types/add-meal-request.yaml
+title: AddMealRequest
+type: object
+description: Actual meal person scheduled to eat
+properties:
+  consumeTime:
+    type: string
+    format: date-time
+  foodItemId:
+    type: string
+  amount:
+    type: number
+    format: double
+  tag:
+    type: string
+    enum:
+      - breakfast
+      - lunch
+      - dinner
+      - first
+      - second
+      - third
+      - fourth
+      - fith
+      - sixth
+

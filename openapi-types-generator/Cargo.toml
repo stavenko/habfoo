@@ -1,0 +1,15 @@
+[package]
+name = "openapi-types-generator"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+proc-macro = true
+[dependencies]
+http = "*"
+proc-macro2= "*"
+syn= {version="*", features=["full", "fold"]}
+quote="*"
+oas3 = { path ="../oas3-rs", features=["multiple-files"]}
+litrs = "*" 
+convert_case = "*"

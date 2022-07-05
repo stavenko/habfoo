@@ -3,5 +3,5 @@
 
 members = [
   "habfoo-server-mongo",
-  "habfoo-api-generated"
+  "oas3-rs",
 ]
