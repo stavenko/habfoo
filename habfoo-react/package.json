@@ -1,0 +1,41 @@
+{
+  "name": "habfoo-react",
+  "version": "0.0.1",
+  "description": "Habfoo web app",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack",
+    "start": "serve dist"
+  },
+  "author": "Vasiliy G. Stavenko",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
+    "@emotion/css": "^11.9.0",
+    "@types/node": "^17.0.36",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.5",
+    "@zxing/library": "^0.19.1",
+    "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
+    "habfoo-api": "file:../habfoo_ts_generated",
+    "html-webpack-plugin": "^5.5.0",
+    "mobx": "^6.6.0",
+    "mobx-react-lite": "^3.4.0",
+    "quagga": "^0.12.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-webcam": "^7.0.1",
+    "serve": "^13.0.2",
+    "terser-webpack-plugin": "^5.3.1",
+    "typescript": "^4.7.2",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.1"
+  },
+  "dependencies": {
+    "@ericblade/quagga2": "^1.7.0"
+  }
+}
